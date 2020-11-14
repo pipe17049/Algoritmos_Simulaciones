@@ -6,12 +6,13 @@ com2="unload" #Comando 2
 ram = {}
 
 
+
 for x in range(n):
-    
+
     entrada = input()
     comando = entrada.split(" ")[0]
 
-    if comando == com1 :  #Compara si la entrada del comando es igual a load
+    if comando == com1 or comando == com1.upper() or comando == com1.capitalize():  #Compara si la entrada del comando es igual a load
         ''' Arg1 es la posicion de memoria'''
         arg1= entrada.split(" ")[1]
         #Arg2 es el numero de proceso
@@ -25,7 +26,7 @@ for x in range(n):
             print("La carga del proceso "+arg2+ " en la posicion de memoria "+arg1+" fue exitosa")
       
         
-    elif comando == com2 : #Compara si la entrada del comando es igual a unload
+    elif comando == com2 or comando == com2.upper() or comando == com2.capitalize(): #Compara si la entrada del comando es igual a unload
 
         #Arg3 Posicion Memoria a liberar
         arg3 = entrada.split(" ")[1]
